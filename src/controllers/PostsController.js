@@ -2,7 +2,7 @@ import Post from '../models/Post.js';
 import Foto from '../models/Foto.js';
 
 class PostsController {
-	async create(req, res) { //Feito e conferido
+	async create(req, res) {
 		try {
 			console.log(req.body);
 			const post = await Post.create(req.body);
@@ -14,7 +14,7 @@ class PostsController {
 		}
 	}
 
-	async read(req, res) { //feito
+	async read(req, res) {
 		try {
 			const { id } = req.params;
 
@@ -69,7 +69,7 @@ class PostsController {
 		}
 	}
 
-	async delete(req, res) { //feito
+	async delete(req, res) {
 		try {
 			const { id } = req.params;
 
@@ -93,7 +93,7 @@ class PostsController {
 		}
 	}
 
-	async show(req, res) { //Feito e conferido (funcionalidade para teste)
+	async show(req, res) {
 		try {
 			const posts = await Post.findAll({
 				attributes: ['id', 'title', 'description'],
