@@ -10,6 +10,7 @@ Este repositório contém a API backend para o projeto PS Include. Siga as instr
 
 ```bash
 git clone https://github.com/faeldantas/ps_include-backend.git
+
 ```
 
 ## Instalar Dependências
@@ -19,20 +20,38 @@ git clone https://github.com/faeldantas/ps_include-backend.git
 
 ```bash
 npm install
+
+```
+
+## Rodar Migrations
+
+1. Você deve rodar as migrations com o seguinte comando:
+
+```bash
+npx sequelize db:migrate
+
+```
+## Rodar Seeds
+
+1. Você deve rodar os seeds após as migrations com o seguinte comando:
+
+```bash
+npx sequelize db:seed:all
+
 ```
 
 ## Configurar o Arquivo .env
 
-1. Dentro do diretório `ps_include-backend`, localize o arquivo `.env.example`.
-2. Faça uma cópia deste arquivo e renomeie para `.env`.
-3. Abra o arquivo `.env` em um editor de texto.
-4. Preencha as variáveis de ambiente com os dados do seu banco de dados. Por exemplo:
+1. Dentro do diretório `ps_include-backend`, localize o arquivo `.env.`.
+2. Preencha as variáveis de ambiente com os dados do seu banco de dados. Por exemplo:
 
 ```plaintext
-DB_HOST=seu_host
-DB_USER=seu_usuario
-DB_PASS=sua_senha
-DB_NAME=seu_banco_de_dados
+DATABASE= seu_banco_de_dados
+DATABASE_HOST= seu_host
+DATABASE_PORT= sua_senha
+DATABASE_USERNAME= seu_usuario
+DATABASE_PASSWORD= sua_senha
+
 ```
 
 ## Executar a API
@@ -41,4 +60,5 @@ DB_NAME=seu_banco_de_dados
 
 ```bash
 npm start
+
 ```
